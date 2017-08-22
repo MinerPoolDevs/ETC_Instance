@@ -1,0 +1,17 @@
+pipeline:
+  copy:
+    image: appleboy/drone-scp
+    host: etc.minerpool.co
+    username: ubuntu
+    key: ${SSH_KEY}
+    secrets: [ SSH_KEY ]
+    target: /mnt/open-ethereum-pool-master/www2
+
+  build:
+    image: appleboy/drone-ssh
+    host: etc.minerpool.co
+    username: ubuntu
+    key: ${SSH_KEY}
+    secrets: [ SSH_KEY ]
+    script:
+      - sudo /mnt/open-ethereum-pool-master/www/build.sh
