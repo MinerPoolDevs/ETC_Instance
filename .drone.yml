@@ -15,4 +15,4 @@ pipeline:
     key: ${SSH_KEY}
     secrets: [ SSH_KEY ]
     script:
-      - sudo /mnt/open-ethereum-pool-master/www/build.sh
+      - cd /mnt/open-ethereum-pool-master/www/ && build.sh
