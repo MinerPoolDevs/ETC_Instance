@@ -6,6 +6,7 @@ pipeline:
     key: ${SSH_KEY}
     secrets: [ SSH_KEY ]
     target: /mnt/open-ethereum-pool-master/www2
+    source: .
 
   build:
     image: appleboy/drone-ssh
