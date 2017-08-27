@@ -7,7 +7,7 @@
         </h1>
         <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts run twice per day.<br/>
         <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.<br/>
-	All network transaction fees paid to miners
+        <span class="label label-success">Profitable</span> Network TX fees paid to miners.<br/>
       </div>
       <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
@@ -42,7 +42,7 @@
   <div>
     <hr/>
     <h4 class="note note-info text-center">
-      <p><b>Ethminer:</b> ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G<br>
+      <p><b>Ethminer:</b> ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G<br><br>
       <b>Stratum:</b> stratum+tcp://eth.minerpool.co:8008</p>
     </h4>
   </div>
