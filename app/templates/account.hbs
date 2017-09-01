@@ -46,22 +46,14 @@
 
 <div>
   <h4 class="note note-info text-center">
-      <p><b>Wallet Balance</b><br>
+      <p><b>Wallet Link</b><br>
+        {{#if model.payments}}
           {{#each model.payments as |tx|}}
-            <!--<a href="http://gastracker.io/addr/{{tx.address}}" class="hash" rel="nofollow" target="_blank">{{tx.address}}</a>
-            -->
-            <table class="table table-condensed table-striped">
-              <tbody>
-                {{#each model.payments as |tx|}}
-                  <tr>
-                    <td>
-                      <a href="http://gastracker.io/addr/{{tx.address}}" class="hash" rel="nofollow" target="_blank">{{tx.address}}</a>
-                    </td>
-                  </tr>
-                {{/each}}
-              </tbody>
-            </table>
+            <a href="http://gastracker.io/addr/{{tx.address}}" class="hash" rel="nofollow" target="_blank">{{tx.address}}</a>
           {{/each}}
+        {{else}}
+          <h3>We haven't earned any payouts yet :)</h3>
+        {{/if}}
       </p>
   </h4>
 </div>
