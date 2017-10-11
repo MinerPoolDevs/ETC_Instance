@@ -44,20 +44,16 @@
   </div>
 </div>
 
-<div class="table-responsive">
-  <table class="table table-condensed table-striped">
-    <thead>
-    </thead>
-    <tbody>
-      {{#each model.payments as |tx|}}
-        <tr>
-          <td>
-            <a href="http://gastracker.io/addr/{{tx.address}}" class="hash" rel="nofollow" target="_blank">View Wallet</a>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
+<div>
+  <p>
+    {{#if model.payments}}
+        {{#each model.payments as |tx|}}
+          <b>View Wallet</b><br>
+        {{/each}}
+      {{else}}
+        <h4>We haven't earned any payouts yet :)</h4>
+    {{/if}}
+  </p>
 </div>
 
 <div class="container">
