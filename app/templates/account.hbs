@@ -45,26 +45,24 @@
 </div>
 
 <div>
-  <h4 class="note note-info text-center">
-      <p><b>Wallet Link</b><br>
-        {{#if model.payments}}
-          {{#each model.payments as |tx|}}
+  <p><b>Wallet Link</b><br>
+    {{#if model.payments}}
+      {{#each model.payments as |tx|}}
 
-            <tr>
-              <td>
-                <a href="http://gastracker.io/addr/{{tx.address}}" class="hash">{{tx.address}}</a>
-              </td>
-            </tr>
+        
 
-          {{/each}}
-        {{else}}
-          <h4>We haven't earned any payouts yet :)</h4>
-        {{/if}}
-      </p>
-  </h4>
+        <tr>
+          <td>
+            <a href="http://gastracker.io/addr/{{tx.address}}" class="hash">{{tx.address}}</a>
+          </td>
+        </tr>
+
+      {{/each}}
+    {{else}}
+      <h4>We haven't earned any payouts yet :)</h4>
+    {{/if}}
+  </p>
 </div>
-
-
 
 <div class="container">
   <ul class="nav nav-tabs">
