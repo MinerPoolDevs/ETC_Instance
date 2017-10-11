@@ -49,7 +49,13 @@
       <p><b>Wallet Link</b><br>
         {{#if model.payments}}
           {{#each model.payments as |tx|}}
-            <a href="http://gastracker.io/addr/{{tx.address}}" class="hash" rel="nofollow" target="_blank">{{tx.address}}</a>
+
+            <tr>
+              <td>
+                <a href="http://gastracker.io/addr/{{tx.address}}" class="hash" rel="nofollow" target="_blank">{{tx.address}}</a>
+              </td>
+            </tr>
+
           {{/each}}
         {{else}}
           <h4>We haven't earned any payouts yet :)</h4>
